@@ -1,0 +1,47 @@
+=============================
+= Maze generator and solver =
+=============================
+
+
+Instructions:
+launch python3 interpeter in current dir
+
+load module
+>>> import maze
+
+global variables of module:
+maze.NUM_ROWS: height of maze, default 30
+maze.NUM_COLS: width of maze, default 40
+maze.TIME_RES: time resolution for the animation of the algorithms, default 0.1 second
+
+create new maze
+>>> m = maze.maze()
+
+
+mazes can be displayed at anytime with print(m):
+ - 'X' represents a wall
+ - ' ' represents a free path
+ - '+' represents an active wall during maze generation
+ - '.' represents a cell part of the solution path (after solve)
+ - ':' represents a dead-end  (after solve)
+
+to generate a maze, use generator generate()
+2 helpers are provided:
+>>> m.generateFinal()
+for the final state of the generated maze
+or
+>>> m.generateAnimate():
+to view the algorithm during execution
+
+
+to solve the maze, use generator solve()
+2 helpers:
+>>> m.solveFinal()
+to view the solution
+>>> m.solveAnimate()
+to view the algorithm building the solution
+
+
+use resetSolution() to erase solution:
+>>> m.resetSolution()
+
